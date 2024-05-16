@@ -25,6 +25,7 @@ function RegisterForm() {
         <div className="registration-form">
             <h2>Registration Form</h2>
             <form onSubmit={handleSubmit}>
+            <div className="input-fields">   
                 <TextInput 
                     label='Full Name:'
                     value={fullName}
@@ -37,7 +38,8 @@ function RegisterForm() {
                     onChange={(e) => setEmail(e.target.value)}
                     required
                 />
-                <div>
+                </div> 
+                <div className="radio-buttons">
                     <label>Gender:</label>
                     <RadioButton 
                         label='Female'
@@ -63,7 +65,7 @@ function RegisterForm() {
                     checked={sendMarketing}
                     onChange={(e) => setSendMarketing(e.target.checked)}
                 />
-                <button type="submit">Register</button>
+                <button type="submit" className="submit-button">Register</button>
             </form>
             {submitted && (
                 <div>
